@@ -30,7 +30,7 @@ public final class TestTransactions {
         return create(accountId, DEFAULT_AMOUNT, BUSINESS_HOURS);
     }
 
-    private static Transaction create(String accountId, String amount, LocalTime time) {
+    public static Transaction create(String accountId, String amount, LocalTime time) {
         return new Transaction("tx-1", accountId, new BigDecimal(amount),
                 LocalDateTime.of(DEFAULT_DATE, time));
     }
